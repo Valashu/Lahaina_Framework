@@ -30,4 +30,4 @@ Neue Features
     * Loader muss nicht mehr direkt dem Controller übergeben werden, sondern 
       ist über das Lahaina Objekt verwendbar.
 
-Test
+Test2
