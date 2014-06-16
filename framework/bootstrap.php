@@ -25,7 +25,7 @@
 
     // Read HTTP request
     $method = $_SERVER['REQUEST_METHOD'];
-    $uri = explode('/', str_replace('/index.php', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+    $uri = explode('/', str_replace('/index.php', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
     $uri = array_values(array_diff($uri, array($config->get('app.folder'), '')));
 
     // Check method and create HTTP request
