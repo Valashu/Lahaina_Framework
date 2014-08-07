@@ -3,13 +3,13 @@
     if (!defined('PATH'))
 	exit('Kein direkter Skriptzugriff erlaubt!');
 
-use lahaina\framework\http\Request;
-use lahaina\framework\http\PostRequest;
-use lahaina\framework\common\Lahaina;
-use lahaina\framework\common\Loader;
-use lahaina\framework\common\Router;
-use lahaina\framework\common\Config;
-use lahaina\framework\common\Logger;
+    use lahaina\framework\http\Request;
+    use lahaina\framework\http\PostRequest;
+    use lahaina\framework\common\Lahaina;
+    use lahaina\framework\common\Loader;
+    use lahaina\framework\common\Router;
+    use lahaina\framework\common\Config;
+    use lahaina\framework\common\Logger;
 
 // Create configuration
     $config = new Config($config);
@@ -25,7 +25,7 @@ use lahaina\framework\common\Logger;
 
     // Read HTTP request
     $method = $_SERVER['REQUEST_METHOD'];
-    $uri = explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    $uri = explode('/', str_replace('/index.php', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
     $uri = array_values(array_diff($uri, array($config->get('app.folder'), '')));
 
     // Check method and create HTTP request
