@@ -144,6 +144,9 @@ class Orm {
         return $this;
     }
 
+    /**
+     * Reset ORM data
+     */
     protected function _reset() {
         $this->_tableName = '';
         $this->_idColumn = 'id';
