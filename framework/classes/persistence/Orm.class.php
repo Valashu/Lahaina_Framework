@@ -134,7 +134,6 @@ class Orm {
      * @return \lahaina\framework\persistence\Orm
      */
     public function factory($name) {
-        $this->_reset();
         $this->_lahaina->logger()->debug('ORM factory (' . lcfirst($name) . ' model)', $this);
         $modelClassName = $this->_buildModelClassName($name);
         $this->_tableName = $modelClassName::TABLE_NAME;
@@ -142,32 +141,6 @@ class Orm {
         $this->setConnection($modelClassName::CONNECTION_NAME);
         $this->_modelClassName = $modelClassName;
         return $this;
-    }
-
-    /**
-     * Reset ORM data
-     */
-    protected function _reset() {
-        $this->_tableName = '';
-        $this->_queryCache = array();
-        $this->_tableAlias = null;
-        $this->_values = array();
-        $this->_resultColumns = array('*');
-        $this->_usingDefaultResultColumns = true;
-        $this->_joinSources = array();
-        $this->_distinct = false;
-        $this->_isRawQuery = false;
-        $this->_rawQuery = '';
-        $this->_rawParameters = array();
-        $this->_whereConditions = array();
-        $this->_limit = null;
-        $this->_offset = null;
-        $this->_orderBy = array();
-        $this->_groupBy = array();
-        $this->_havingConditions = array();
-        $this->_dirtyFields = array();
-        $this->_exprFields = array();
-        $this->_isNew = false;
     }
 
     /**
@@ -1581,6 +1554,17 @@ class Orm {
         if ($caching_enabled) {
             $this->_cacheQueryResult($cache_key, $result);
         }
+
+        // reset ORM after executing the query
+        $this->_limit = null;
+        $this->_offset = null;
+        $this->_orderBy = null;
+        $this->_joinSources = array();
+        $this->_values = array();
+        $this->_resultColumns = array('*');
+        $this->_usingDefaultResultColumns = true;
+        $this->_whereConditions = array();
+
         return $result;
     }
 
