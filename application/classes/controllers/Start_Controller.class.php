@@ -10,7 +10,7 @@ use lahaina\framework\mvc\Controller;
     /**
      * Start controller
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

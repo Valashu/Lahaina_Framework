@@ -11,7 +11,7 @@ use lahaina\framework\http\PostRequest;
     /**
      * Login security for single-sign on extends security class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

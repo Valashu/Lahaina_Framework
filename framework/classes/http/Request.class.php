@@ -11,7 +11,7 @@ use lahaina\framework\data\Container;
     /**
      * Http request
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      */

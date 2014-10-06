@@ -11,7 +11,7 @@ if (!defined('PATH'))
     /**
      * Validator
      * 
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Tasos Bekos <tbekos@gmail.com>
      * @author Chris Gutierrez <cdotgutierrez@gmail.com>

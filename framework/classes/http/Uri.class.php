@@ -10,7 +10,7 @@ use \lahaina\framework\data\Container;
     /**
      * Uri
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

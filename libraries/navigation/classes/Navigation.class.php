@@ -10,7 +10,7 @@ use lahaina\framework\common\Lahaina;
     /**
      * Navigation
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      */

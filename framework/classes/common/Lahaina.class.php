@@ -16,7 +16,7 @@ use \lahaina\framework\common\Loader;
     /**
      * Lahaina framework base class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

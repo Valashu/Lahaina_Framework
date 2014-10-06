@@ -13,7 +13,7 @@ use lahaina\libraries\message\Warning;
     /**
      * Login controller for user authentication
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      */

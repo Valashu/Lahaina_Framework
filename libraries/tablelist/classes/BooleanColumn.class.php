@@ -5,7 +5,7 @@
     /**
      * Boolean column extends column class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Melanie Rufer
      */

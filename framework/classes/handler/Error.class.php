@@ -11,7 +11,7 @@ use lahaina\framework\common\Lahaina;
     /**
      * Error handler
      * 
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @see http://us3.php.net/manual/en/function.set-error-handler.php#109149
      */

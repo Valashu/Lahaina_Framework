@@ -11,7 +11,7 @@ use lahaina\framework\data\Container;
     /**
      * Data collection list with optional specified entry type
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

@@ -8,7 +8,7 @@ if (!defined('PATH'))
     /**
      * Link item extends item class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      */
