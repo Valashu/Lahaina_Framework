@@ -116,7 +116,6 @@ class Error {
                 <b>' . $exceptionType . ':</b> <i>' . $e->getMessage() . '</i></div>
                 <pre style="margin: 5px 0 0 0; padding: 5px 10px; background: #DBEAF9; font-size: 12px;">' . $e->getTraceAsString() . '</pre>
                 <div style="margin: 5px 0 0 0; padding: 5px 10px;  color: #fff; background: #005EA7; font-size: 10px;">' .
-                $exceptionType . ' in ' . $e->getFile() . ', line ' . $e->getLine() . '</div>';
             $footer = '</body></html>';
 
             // Write log
@@ -129,7 +128,7 @@ class Error {
 
     /**
      * Capture function for critical errors
-     *
+                $exceptionType . ' in ' . $e->getFile() . ', line ' . $e->getLine() . '</div>';
      * @exit mixed Fehlermeldung
      */
     public function captureShutdown() {
@@ -166,4 +165,4 @@ class Error {
 
 }
 
-?>
+     *
