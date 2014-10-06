@@ -149,7 +149,6 @@ class Orm {
      */
     protected function _reset() {
         $this->_tableName = '';
-        $this->_idColumn = 'id';
         $this->_queryCache = array();
         $this->_tableAlias = null;
         $this->_values = array();
@@ -166,11 +165,9 @@ class Orm {
         $this->_orderBy = array();
         $this->_groupBy = array();
         $this->_havingConditions = array();
-        $this->_data = array();
         $this->_dirtyFields = array();
         $this->_exprFields = array();
         $this->_isNew = false;
-        $this->_modelClassName = '';
     }
 
     /**
