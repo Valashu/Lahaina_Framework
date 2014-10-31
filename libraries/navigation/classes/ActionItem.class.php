@@ -1,39 +1,43 @@
 <?php
 
-    namespace lahaina\libraries\navigation;
+namespace lahaina\libraries\navigation;
 
 if (!defined('PATH'))
-	exit('Kein direkter Skriptzugriff erlaubt!');
+    exit('Kein direkter Skriptzugriff erlaubt!');
+
+/**
+ * Action item extends item class
+ *
+ * @version 1.0.3
+ *
+ * @author Jonathan Nessier
+ */
+class ActionItem extends Item {
 
     /**
-     * Action item extends item class
+     * Constructor
      *
-     * @version 1.0.3
-     * 
-     * @author Jonathan Nessier
+     * @param string $title Title of navigation item
+     * @param string $controllerName Name of controller
+     * @param string $actionName Name of action
+     * @param string $id ID of entity
+     * @param string $cssClass Additional CSS class(es)
+     * @param array $sub = Sub controllers of current item
+     * @param string $htmlTemplate HTML template
      */
-    class ActionItem extends Item {
+    public function __construct($title, $controllerName, $actionName = null, $id = null, $cssClass = null, $activeCssClass = 'current', $sub = array(), $htmlTemplate = null) {
+        $this->_title = $title;
+        $this->_url = URL . '/' . strtolower($controllerName) . ($actionName ? '/' . $actionName . ($id ? '/' . $id : '') : '');
+        $this->_actionName = $actionName;
 
-	/**
-	 * Constructor
-	 * 
-	 * @param string $title Title of navigation item
-	 * @param string $controllerName Name of controller
-	 * @param string $actionName Name of action
-	 * @param string $id ID of entity
-	 * @param string $cssClass Additional CSS class(es) 
-	 * @param array $sub = Sub controllers of current item
-	 */
-	public function __construct($title, $controllerName, $actionName = null, $id = null, $cssClass = null, $sub = array()) {
-	    $this->title = $title;
-	    $this->url = URL . '/' . strtolower($controllerName) . ($actionName ? '/' . $actionName . ($id ? '/' . $id : '') : '');
-	    $this->actionName = $actionName;
+        $this->_controllerName = strtolower($controllerName);
 
-	    $this->controllerName = strtolower($controllerName);
-
-	    $this->cssClass = $cssClass;
-	    $this->sub = $sub;
-	}
-
+        $this->_cssClass = $cssClass;
+        $this->_activeCssClass = $activeCssClass;
+        $this->_sub = $sub;
+        if ($htmlTemplate) {
+            $this->setHtmlTemplate($htmlTemplate);
+        }
     }
-    
+
+}

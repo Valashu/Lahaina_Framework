@@ -1,33 +1,37 @@
 <?php
 
-    namespace lahaina\libraries\navigation;
+namespace lahaina\libraries\navigation;
 
 if (!defined('PATH'))
-	exit('Kein direkter Skriptzugriff erlaubt!');
+    exit('Kein direkter Skriptzugriff erlaubt!');
+
+/**
+ * Link item extends item class
+ *
+ * @version 1.0.3
+ *
+ * @author Jonathan Nessier
+ */
+class LinkItem extends Item {
 
     /**
-     * Link item extends item class
+     * Constructor
      *
-     * @version 1.0.3
-     * 
-     * @author Jonathan Nessier
+     * @param string $title Title of navigation item
+     * @param string $url Linked url
+     * @param string $cssClass Additional CSS class(es)
+     * @param array $sub Sub controllers of current item
+     * @param string $htmlTemplate HTML template
      */
-    class LinkItem extends Item {
-
-	/**
-	 * Constructor
-	 * 
-	 * @param string $title Title of navigation item
-	 * @param string $url Linked url
-	 * @param string $cssClass Additional CSS class(es) 
-	 * @param array $sub Sub controllers of current item
-	 */
-	public function __construct($title, $url, $cssClass = null, $sub = array()) {
-	    $this->title = $title;
-	    $this->url = $url;
-	    $this->cssClass = $cssClass;
-	    $this->sub = $sub;
-	}
-
+    public function __construct($title, $url, $cssClass = null, $activeCssClass = 'current', $sub = array(), $htmlTemplate = null) {
+        $this->_title = $title;
+        $this->_url = $url;
+        $this->_cssClass = $cssClass;
+        $this->_activeCssClass = $activeCssClass;
+        $this->_sub = $sub;
+        if ($htmlTemplate) {
+            $this->setHtmlTemplate($htmlTemplate);
+        }
     }
-    
+
+}
