@@ -16,7 +16,7 @@ use \lahaina\framework\common\Loader;
 /**
  * Lahaina framework base class
  *
- * @version 1.0.3
+ * @version 1.0.4
  *
  * @author Jonathan Nessier
  */
@@ -25,7 +25,7 @@ class Lahaina {
     /**
      * Lahaina framework base class
      *
-     * @version 1.0.3
+     * @version 1.0.4
      *
      * @author Jonathan Nessier
      */
