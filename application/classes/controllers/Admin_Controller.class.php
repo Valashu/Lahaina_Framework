@@ -11,7 +11,7 @@ use lahaina\framework\common\Lahaina;
     /**
      * Admin controller
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

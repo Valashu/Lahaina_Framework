@@ -23,7 +23,11 @@ use \lahaina\framework\common\Loader;
 class Lahaina {
 
     /**
-     * @var Container
+     * Lahaina framework base class
+     *
+     * @version 1.0.3
+     *
+     * @author Jonathan Nessier
      */
     private $_data;
 

@@ -10,7 +10,7 @@ use lahaina\libraries\message\Message;
     /**
      * Validation message extends message class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      */

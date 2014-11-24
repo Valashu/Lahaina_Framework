@@ -11,7 +11,7 @@ use \lahaina\framework\http\Uri;
     /**
      * Router
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

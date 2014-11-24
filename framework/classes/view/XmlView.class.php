@@ -10,7 +10,7 @@ use lahaina\framework\mvc\View;
     /**
      * XML view extends view class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */

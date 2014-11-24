@@ -11,7 +11,7 @@ use lahaina\framework\common\Lahaina;
     /**
      * Tablelist config extends data container class
      *
-     * @version 1.0.2
+     * @version 1.0.3
      * 
      * @author Jonathan Nessier
      * @author Melanie Rufer

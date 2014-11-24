@@ -10,21 +10,25 @@ use lahaina\framework\common\Lahaina;
 
 /**
  * Error handler
- * 
- * @version 1.0.2
- * 
+ *
+ * @version 1.0.3
+ *
  * @see http://us3.php.net/manual/en/function.set-error-handler.php#109149
  */
 class Error {
 
     /**
-     * @var Lahaina
+     * Error handler
+     *
+     * @version 1.0.3
+     *
+     * @see http://us3.php.net/manual/en/function.set-error-handler.php#109149
      */
     private $_lahaina;
 
     /**
      * Constructor
-     * 
+     *
      * @param \lahaina\framework\common\Lahaina $lahaina Lahaina object
      */
     public function __construct(Lahaina $lahaina) {
@@ -54,7 +58,7 @@ class Error {
 
     /**
      * Capture function for normal errors
-     * 
+     *
      * @param int $number
      * @param string $message
      * @param string $file
@@ -86,8 +90,8 @@ class Error {
     }
 
     /**
-     * Capture function for exceptions 
-     * 
+     * Capture function for exceptions
+     *
      * @param \Exception $e Captured exception
      * @exit string exception output
      */
@@ -112,8 +116,7 @@ class Error {
                 <b>' . $exceptionType . ':</b> <i>' . $e->getMessage() . '</i></div>
                 <pre style="margin: 5px 0 0 0; padding: 5px 10px; background: #DBEAF9; font-size: 12px;">' . $e->getTraceAsString() . '</pre>
                 <div style="margin: 5px 0 0 0; padding: 5px 10px;  color: #fff; background: #005EA7; font-size: 10px;">' .
-                    $exceptionType . ' in ' . $e->getFile() . ', line ' . $e->getLine() . '</div>';
-            $footer = '</body></html>';
+                $footer = '</body></html>';
 
             // Write log
             $this->_lahaina->logger()->error($exceptionType . ' in ' . $e->getFile() . ', line ' . $e->getLine() . ': ' . $e->getMessage() . "\n" . $e->getTraceAsString());
@@ -125,7 +128,7 @@ class Error {
 
     /**
      * Capture function for critical errors
-     * 
+      $exceptionType . ' in ' . $e->getFile() . ', line ' . $e->getLine() . '</div>';
      * @exit mixed Fehlermeldung
      */
     public function captureShutdown() {
@@ -161,5 +164,3 @@ class Error {
     }
 
 }
-
-?>

@@ -32,7 +32,17 @@ class Validator {
     protected $filters = array();
 
     /**
-     * @var Data
+     * Validator
+     * 
+     * @version 1.0.3
+     * 
+     * @author Tasos Bekos <tbekos@gmail.com>
+     * @author Chris Gutierrez <cdotgutierrez@gmail.com>
+     * @author Corey Ballou <ballouc@gmail.com>
+     * @author Jonathan Nessier
+     * 
+     * @see Modified solution of: https://github.com/blackbelt/php-validation
+     * @see Based on idea: http://brettic.us/2010/06/18/form-validation-class-using-php-5-3/
      */
     protected $data;
 

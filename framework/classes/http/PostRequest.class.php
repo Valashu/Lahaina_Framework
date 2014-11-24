@@ -10,7 +10,7 @@ use lahaina\framework\data\Container;
     /**
      * Http post request
      *
-     * @version 1.0.2
+     * @version 1.0.3
      *
      * @author Jonathan Nessier
      */
