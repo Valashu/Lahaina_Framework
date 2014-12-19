@@ -20,13 +20,13 @@ use \lahaina\framework\http\Uri;
 	/**
 	 * @var Uri
 	 */
-	private $_uri;
+	protected $_uri;
 
 	/**
 	 * @var Lahaina
 	 */
-	private $_lahaina;
-	private $_path = '';
+	protected $_lahaina;
+	protected $_path = '';
 
 	/**
 	 * Constructor
