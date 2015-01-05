@@ -4,6 +4,7 @@
      * Application and framework constants
      */
     define('PATH', $config['app']['path']);
+    define('APP_PATH', PATH . '/' . $config['app']['namespace']);
     define('URL', $config['app']['url']);
 
     define('TEMPLATE_PATH', PATH . '/' . $config['template']['folder'] . '/' . $config['template']['name'] . '/');
