@@ -38,16 +38,16 @@ use lahaina\framework\exception\FrameworkException;
 
 	    // Register autoload for application classes, models and controller
 	    spl_autoload_register(function($className) {
-		$this->_load($className . '.class.php', PATH . '/application/classes/common');
-		$this->_load($className . '.class.php', PATH . '/application/classes/models');
-		$this->_load($className . '.class.php', PATH . '/application/classes/controllers');
+		$this->_load($className . '.class.php', APP_PATH . '/classes/common');
+		$this->_load($className . '.class.php', APP_PATH . '/classes/models');
+		$this->_load($className . '.class.php', APP_PATH . '/classes/controllers');
 	    });
 
 	    // Load manual added application classes 
-	    if (file_exists(PATH . '/application/autoload.php')) {
-		require_once (PATH . '/application/autoload.php');
+	    if (file_exists(APP_PATH . '/autoload.php')) {
+		require_once (APP_PATH . '/autoload.php');
 	    } else {
-		throw new FrameworkException('Cannot find the autoload file (' . PATH . '/application/autoload.php) for manual definied application classes');
+		throw new FrameworkException('Cannot find the autoload file (' . APP_PATH . '/autoload.php) for manual definied application classes');
 	    }
 	}
 
