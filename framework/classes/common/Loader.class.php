@@ -19,7 +19,7 @@ use lahaina\framework\exception\FrameworkException;
 	/**
 	 * @var Lahaina 
 	 */
-	private $_lahaina;
+	protected $_lahaina;
 
 	/**
 	 * Constructor
@@ -81,7 +81,7 @@ use lahaina\framework\exception\FrameworkException;
 	 * @param string $classPath Path to class
 	 * @return boolean
 	 */
-	private function _load($className, $classPath) {
+	protected function _load($className, $classPath) {
 	    $classFile = $classPath . '/' . basename(str_replace('\\', '/', $className));
 	    if (file_exists($classFile)) {
 		$this->_lahaina->logger()->debug('Load class (' . $className . ')', $this);
