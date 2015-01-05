@@ -64,8 +64,8 @@ use lahaina\framework\common\Lahaina;
 
 	    ob_start();
 
-	    if (file_exists(PATH . '/application/views/' . strtolower($this->_path))) {
-		include (PATH . '/application/views/' . strtolower($this->_path));
+	    if (file_exists(APP_PATH . '/views/' . strtolower($this->_path))) {
+		include (APP_PATH . '/views/' . strtolower($this->_path));
 	    } elseif (file_exists(strtolower($this->_path))) {
 		include (strtolower($this->_path));
 	    } else {
