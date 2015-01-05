@@ -75,8 +75,8 @@ use lahaina\framework\mvc\View;
 		throw new FrameworkException('Cannot find header template (' . TEMPLATE_PATH . '/' . $this->_headerFile . ')');
 	    }
 
-	    if (file_exists(PATH . '/application/views/' . strtolower($this->_path))) {
-		include (PATH . '/application/views/' . strtolower($this->_path));
+	    if (file_exists(APP_PATH . '/views/' . strtolower($this->_path))) {
+		include (APP_PATH . '/views/' . strtolower($this->_path));
 	    } elseif (file_exists(strtolower($this->_path))) {
 		include (strtolower($this->_path));
 	    } else {
