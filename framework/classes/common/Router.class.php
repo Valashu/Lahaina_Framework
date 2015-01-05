@@ -37,7 +37,7 @@ use \lahaina\framework\http\Uri;
 	public function __construct(Lahaina $lahaina, Uri $uri = null) {
 
 	    $this->_lahaina = $lahaina;
-	    $this->_path = PATH . '/application/classes/controllers/';
+	    $this->_path = APP_PATH . '/classes/controllers/';
 
 	    if ($uri === null) {
 		$this->_uri = $this->_lahaina->request()->getUri();
