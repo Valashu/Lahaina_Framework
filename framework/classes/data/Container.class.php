@@ -101,6 +101,7 @@ use lahaina\framework\exception\FrameworkException;
 	 */
 	public function remove($key) {
 	    unset($this->_container[$key]);
+	    $this->_container = array_values($this->_container);
 	}
 
 	/**
