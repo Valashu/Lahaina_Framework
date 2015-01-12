@@ -230,7 +230,7 @@ class Model {
      * @return string
      */
     protected function _buildModelClassName($name) {
-        return 'application\\models\\' . ucfirst($name) . '_Model';
+        return $this->_lahaina->config('app.namespace').'\\models\\' . ucfirst($name) . '_Model';
     }
 
     /**
