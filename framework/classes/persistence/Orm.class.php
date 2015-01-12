@@ -147,7 +147,7 @@ class Orm {
      * Build the model class name
      */
     protected function _buildModelClassName($name) {
-        $modelClassName = 'application\\models\\' . ucfirst($name) . '_Model';
+        $modelClassName = $this->_lahaina->config('app.namespace') . '\\models\\' . ucfirst($name) . '_Model';
         if (class_exists($modelClassName)) {
             return $modelClassName;
         } else {
