@@ -8,7 +8,7 @@ if (!defined('PATH')) {
 }
 
 if (!defined('APP_PATH')) {
-    define('APP_PATH', PATH . '/' . $config['app']['namespace']);
+    define('APP_PATH', $config['app']['path'] . '/' . $config['app']['namespace']);
 }
 
 if (!defined('URL')) {
@@ -16,25 +16,25 @@ if (!defined('URL')) {
 }
 
 if (!defined('TEMPLATE_PATH')) {
-    define('TEMPLATE_PATH', PATH . '/' . $config['template']['folder'] . '/' . $config['template']['name'] . '/');
+    define('TEMPLATE_PATH', $config['app']['path'] . '/' . $config['template']['folder'] . '/' . $config['template']['name'] . '/');
 }
 
 if (!defined('TEMPLATE_URL')) {
-    define('TEMPLATE_URL', URL . '/' . $config['template']['folder'] . '/' . $config['template']['name'] . '/');
+    define('TEMPLATE_URL', $config['app']['url'] . '/' . $config['template']['folder'] . '/' . $config['template']['name'] . '/');
 }
 
 if (!defined('LIBRARY_PATH')) {
-    define('LIBRARY_PATH', PATH . '/' . $config['libraries']['folder'] . '/');
+    define('LIBRARY_PATH', $config['app']['path'] . '/' . $config['libraries']['folder'] . '/');
 }
 
 if (!defined('LIBRARY_URL')) {
-    define('LIBRARY_URL', URL . '/' . $config['libraries']['folder'] . '/');
+    define('LIBRARY_URL', $config['app']['url'] . '/' . $config['libraries']['folder'] . '/');
 }
 
 if (!defined('MEDIA_PATH')) {
-    define('MEDIA_PATH', PATH . '/' . $config['media']['folder'] . '/');
+    define('MEDIA_PATH', $config['app']['path'] . '/' . $config['media']['folder'] . '/');
 }
 
 if (!defined('MEDIA_URL')) {
-    define('MEDIA_URL', URL . '/' . $config['media']['folder'] . '/');
+    define('MEDIA_URL', $config['app']['url'] . '/' . $config['media']['folder'] . '/');
 }
